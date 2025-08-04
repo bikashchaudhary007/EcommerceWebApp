@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="EcommerceWebApp.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="main-container">
+            <%-- Navbar --%>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="Default.aspx">Souvenir Sanctuary</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="Default.aspx">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                        </ul>
+
+                        <div class="d-flex">
+                            <a href="LoginPage.aspx" class="btn btn-outline-primary me-2">Login</a>
+                            <a href="SignUpPage.aspx" class="btn btn-primary">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+
+            <%-- Navbar End --%>
+
+
+
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+
+            <%-- Footer --%>
+            <footer class="bg-dark text-light py-3 mt-5">
+                <div class="container text-center">
+                    <p class="mb-1">&copy; 2025 Serena's Souvenir Sanctuary</p>
+                    <small>
+                        <a href="Privacy.aspx" class="text-light text-decoration-none me-3">Privacy Policy</a>
+                        <a href="Terms.aspx" class="text-light text-decoration-none">Terms of Use</a>
+                    </small>
+                </div>
+            </footer>
+            <%-- Footer End --%>
+        </div>
+    </form>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

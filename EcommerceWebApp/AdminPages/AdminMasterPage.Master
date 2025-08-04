@@ -1,0 +1,172 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMasterPage.master.cs" Inherits="EcommerceWebApp.AdminPages.AdminMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        :root {
+            --sidebar-width: 220px;
+        }
+
+        .d-flex-full {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: var(--sidebar-width);
+            background: #f8f9fa;
+            transition: width .2s;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+            .sidebar.collapsed {
+                width: 60px;
+            }
+
+            .sidebar .nav-link {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .sidebar .nav-text {
+                transition: opacity .2s;
+            }
+
+            .sidebar.collapsed .nav-text {
+                opacity: 0;
+            }
+
+        .content-wrapper {
+            flex: 1;
+            padding: 1rem;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: .5rem 1rem;
+            border-bottom: 1px solid #e5e5e5;
+            background: #fff;
+        }
+
+        .toggle-btn {
+            cursor: pointer;
+        }
+
+        .sidebar .brand {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .active-link {
+            background-color: #e9f5ff;
+            border-radius: .375rem;
+        }
+
+        footer {
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="d-flex-full">
+            <!-- Sidebar -->
+            <div id="sidebar" class="sidebar d-flex flex-column">
+                <div class="d-flex align-items-center px-3 py-2">
+                    <div class="brand flex-grow-1">Admin Panel</div>
+                    <div id="btnToggle" class="toggle-btn ms-2">
+                        <i class="bi bi-list fs-4"></i>
+                    </div>
+                </div>
+                <hr class="my-1" />
+                <div class="px-3 mb-2">
+                    <div class="small text-muted">Logged in as:</div>
+                    <div><strong>
+                        <asp:Literal ID="litUsername" runat="server" Text="AdminUser" /></strong></div>
+                    <div class="text-secondary small">
+                        <asp:Literal ID="litRole" runat="server" Text="Administrator" /></div>
+                </div>
+                <ul class="nav nav-pills flex-column px-2 gap-1">
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center <%# GetActiveClass("AdminDashboard.aspx") %>" href="AdminDashboard.aspx">
+                            <i class="bi bi-speedometer2 me-2"></i><span class="nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center <%# GetActiveClass("Orders.aspx") %>" href="Orders.aspx">
+                            <i class="bi bi-basket3 me-2"></i><span class="nav-text">Orders</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center <%# GetActiveClass("Products.aspx") %>" href="Products.aspx">
+                            <i class="bi bi-box-seam me-2"></i><span class="nav-text">Products</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center <%# GetActiveClass("ProductListView.aspx") %>" href="ProductListView.aspx">
+                            <i class="bi bi-box-seam me-2"></i><span class="nav-text">Product Details</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center <%# GetActiveClass("ProductCategory.aspx") %>" href="ProductCategory.aspx">
+                            <i class="bi bi-tags me-2"></i><span class="nav-text">Category</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mt-auto">
+                        <a class="nav-link d-flex align-items-center" href="Settings.aspx">
+                            <i class="bi bi-gear me-2"></i><span class="nav-text">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Main content area -->
+            <div class="content-wrapper">
+                <div class="topbar mb-3">
+                    <div>
+                        <h5 class="mb-0">Admin Dashboard</h5>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-text"><i class="bi bi-search"></i></span>
+                            <input type="text" class="form-control" placeholder="Search..." />
+                        </div>
+                        <asp:LinkButton ID="lnkLogout" runat="server" CssClass="btn btn-sm btn-outline-secondary" OnClick="lnkLogout_Click">Logout</asp:LinkButton>
+                    </div>
+                </div>
+
+                <!-- page-specific content -->
+                <%--<asp:ContentPlaceHolder ID="MainContent" runat="server" />--%>
+                <div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+
+        <footer class="text-center py-3 small text-muted">
+            &copy; 2025 Serena's Souvenir Sanctuary
+        </footer>
+    </form>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        document.getElementById('btnToggle').addEventListener('click', () => {
+            sidebar.classList.toggle('collapsed');
+        });
+    </script>
+</body>
+</html>

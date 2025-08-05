@@ -75,7 +75,7 @@
                             <h5 class="card-title"><%# Eval("ProductName") %></h5>
                             <p class="card-text text-truncate"><%# Eval("ShortDescription") %></p>
                             <p class="card-text fw-bold mt-auto"><%# String.Format("{0:C}", Eval("Price")) %></p>
-                            <a href='AdminPages/ProductDetailView.aspx?id=<%# Eval("ProductId") %>' class="btn btn-primary mt-2">View Details</a>
+                            <a href='ProductView.aspx?id=<%# Eval("ProductId") %>' class="btn btn-primary mt-2">View Details</a>
                         </div>
                     </div>
                 </div>

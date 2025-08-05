@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Data.SqlClient;
+using EcommerceWebApp.Helpers;
 
 
 namespace EcommerceWebApp
@@ -35,21 +36,20 @@ namespace EcommerceWebApp
                 if (rowsAffected > 0)
                 {
                     // Registration successful
-                    Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Registration successful!');", true);
-                    //ClearFields(); // Clear the input fields after successful registration
+                    ToastHelper.RegisterToast(this, "Registration successfully!", isError: false);
                     Response.Redirect("LoginPage.aspx");
 
                 }
                 else
                 {
                     // Registration failed
-                    Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Registration failed!');", true);
+                    ToastHelper.RegisterToast(this, "Registration failed!", isError: true);
                 }
             }
             catch (Exception ex)
             {
                 // Handle exception
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", $"alert('Error: {ex.Message}');", true);
+                ToastHelper.RegisterToast(this, $"Error: {ex.Message}", isError: true);
             }
             finally
             {

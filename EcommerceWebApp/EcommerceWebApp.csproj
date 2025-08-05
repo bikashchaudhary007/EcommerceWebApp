@@ -69,6 +69,9 @@
   <ItemGroup>
     <Content Include="AdminPages\AdminDashboard.aspx" />
     <Content Include="AdminPages\EditProduct.aspx" />
+    <Content Include="AdminPages\ManageOrders.aspx" />
+    <Content Include="AdminPages\OrderDetailsView.aspx" />
+    <Content Include="AdminPages\Payments.aspx" />
     <Content Include="AdminPages\ProductDetailView.aspx" />
     <Content Include="AdminPages\ProductListView.aspx" />
     <Content Include="AdminPages\Products.aspx" />
@@ -106,7 +109,10 @@
     <Content Include="js\bootstrap.min.js" />
     <Content Include="LoginPage.aspx" />
     <Content Include="MemberDashboard.aspx" />
+    <Content Include="OrderDetails.aspx" />
+    <Content Include="ProductView.aspx" />
     <Content Include="SignUpPage.aspx" />
+    <Content Include="UserOrders.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +136,27 @@
     </Compile>
     <Compile Include="AdminPages\EditProduct.aspx.designer.cs">
       <DependentUpon>EditProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\ManageOrders.aspx.cs">
+      <DependentUpon>ManageOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\ManageOrders.aspx.designer.cs">
+      <DependentUpon>ManageOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\OrderDetailsView.aspx.cs">
+      <DependentUpon>OrderDetailsView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\OrderDetailsView.aspx.designer.cs">
+      <DependentUpon>OrderDetailsView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Payments.aspx.cs">
+      <DependentUpon>Payments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Payments.aspx.designer.cs">
+      <DependentUpon>Payments.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminPages\ProductDetailView.aspx.cs">
       <DependentUpon>ProductDetailView.aspx</DependentUpon>
@@ -195,6 +222,20 @@
     <Compile Include="MemberDashboard.aspx.designer.cs">
       <DependentUpon>MemberDashboard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="OrderDetails.aspx.cs">
+      <DependentUpon>OrderDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderDetails.aspx.designer.cs">
+      <DependentUpon>OrderDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductView.aspx.cs">
+      <DependentUpon>ProductView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductView.aspx.designer.cs">
+      <DependentUpon>ProductView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignUpPage.aspx.cs">
       <DependentUpon>SignUpPage.aspx</DependentUpon>
@@ -202,6 +243,13 @@
     </Compile>
     <Compile Include="SignUpPage.aspx.designer.cs">
       <DependentUpon>SignUpPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserOrders.aspx.cs">
+      <DependentUpon>UserOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserOrders.aspx.designer.cs">
+      <DependentUpon>UserOrders.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -53,7 +53,6 @@ namespace EcommerceWebApp.AdminPages
                     ClearFields();
                     BindCategories();
                     ToastHelper.RegisterToast(this, "Product category created successfully!", isError: false);
-                    //Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script> alert('Product category created successful!'); </script>", true);
 
                 }
                 else

@@ -2,13 +2,75 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>Hello Bikash</h1>
-    <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+     <h1>Hello Bikash</h1>
+
+    <div class="row">
+
+        <div class="col-md-4 mb-3">
+            <div class="card text-white bg-primary">
+                <div class="card-body">
+                    <h5 class="card-title">Placed New Orders</h5>
+                    <p class="card-text display-4">
+                        <asp:Label ID="lblPlacedOrders" runat="server" Text="0"></asp:Label>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card text-white bg-warning">
+                <div class="card-body">
+                    <h5 class="card-title">Shipped Orders</h5>
+                    <p class="card-text display-4">
+                        <asp:Label ID="lblShippedOrders" runat="server" Text="0"></asp:Label>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card text-white bg-info">
+                <div class="card-body">
+                    <h5 class="card-title">Processing Orders</h5>
+                    <p class="card-text display-4">
+                        <asp:Label ID="lblProcessingOrders" runat="server" Text="0"></asp:Label>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card text-white bg-success">
+                <div class="card-body">
+                    <h5 class="card-title">Delivered Orders</h5>
+                    <p class="card-text display-4">
+                        <asp:Label ID="lblDeliveredOrders" runat="server" Text="0"></asp:Label>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card text-white bg-danger">
+                <div class="card-body">
+                    <h5 class="card-title">Cancelled Orders</h5>
+                    <p class="card-text display-4">
+                        <asp:Label ID="lblCancelledOrders" runat="server" Text="0"></asp:Label>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card text-white bg-secondary">
+                <div class="card-body">
+                    <h5 class="card-title">Total Users</h5>
+                    <p class="card-text display-4">
+                        <asp:Label ID="lblTotalUsers" runat="server" Text="0"></asp:Label>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </asp:Content>

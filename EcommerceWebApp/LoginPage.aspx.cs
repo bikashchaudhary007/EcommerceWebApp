@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Data.SqlClient;
+using EcommerceWebApp.Helpers;
 
 namespace EcommerceWebApp
 {
@@ -19,45 +20,49 @@ namespace EcommerceWebApp
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(cs);
-    try
+            using (SqlConnection con = new SqlConnection(cs))
             {
                 con.Open();
                 string query = "SELECT * FROM Users WHERE Email=@Email AND Password=@Password";
-                SqlCommand cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("@Email", txtUsername.Text);
-                cmd.Parameters.AddWithValue("@Password", txtPassword.Text);
-                SqlDataReader dr = cmd.ExecuteReader();
-                if (dr.HasRows)
+                using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    while (dr.Read())
+                    cmd.Parameters.AddWithValue("@Email", txtUsername.Text);
+                    cmd.Parameters.AddWithValue("@Password", txtPassword.Text); 
+                    using (SqlDataReader dr = cmd.ExecuteReader())
                     {
-                        //Access Role and redirect accordingly
-                        string role = dr["Role"].ToString();
-                        Session["user"] = dr["Fullname"].ToString();
-                        if (role == "admin") {
-                            Response.Redirect("AdminPages/AdminDashboard.aspx");
+                        if (dr.HasRows)
+                        {
+                            while (dr.Read())
+                            {
+                                string role = dr["Role"].ToString();
+                                string fullName = dr["Fullname"].ToString();
+                                string userId = dr["Id"].ToString();
+
+                                // normalize session keys to what master page expects
+                                Session["user"] = fullName;
+                                Session["UserName"] = fullName;
+                                Session["UserRole"] = role; // e.g., "user" or "admin"
+                                Session["UserId"] = userId;
+
+                                if (role.Equals("admin", StringComparison.OrdinalIgnoreCase))
+                                {
+                                    ToastHelper.RegisterToast(this, $"Hello {fullName}!", isError: false);
+
+                                    Response.Redirect("AdminPages/AdminDashboard.aspx");
+                                }
+                                else // assume user
+                                {
+                                    ToastHelper.RegisterToast(this, $"Hello {fullName}!", isError: false);
+                                    Response.Redirect("MemberDashboard.aspx");
+                                }
+                            }
                         }
                         else
                         {
-                            Response.Redirect("MemberDashboard.aspx");
+                            Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Login failed!');", true);
                         }
-
-
                     }
-                    // User exists, redirect to welcome page
-                    //Session["user"] = txtUsername.Text;
-                  
                 }
-                else
-                {
-                    // User does not exist, show error message
-                    Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Login failed!');", true);
-                }
-            }
-            finally
-            {
-                con.Close();
             }
 
         }

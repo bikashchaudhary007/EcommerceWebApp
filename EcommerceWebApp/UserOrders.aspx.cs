@@ -244,10 +244,31 @@ VALUES (@OrderId, GETDATE(), @Amount, @PaymentMethod, @PaymentStatus);";
 
         protected void gvCart_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
-            // Implement update logic, or just cancel edit for now
+            int cartItemId = Convert.ToInt32(gvCart.DataKeys[e.RowIndex].Value);
+
+            GridViewRow row = gvCart.Rows[e.RowIndex];
+            TextBox txtQuantity = (TextBox)row.FindControl("txtQuantity");
+
+            if (txtQuantity == null || !int.TryParse(txtQuantity.Text.Trim(), out int quantity) || quantity <= 0)
+            {
+                ltMessage.Text = "<div class='alert alert-danger'>Invalid quantity.</div>";
+                return;
+            }
+
+            using (SqlConnection conn = new SqlConnection(_cs))
+            using (SqlCommand cmd = new SqlCommand("UPDATE UserCartItems SET Quantity = @Quantity WHERE CartItemId = @CartItemId", conn))
+            {
+                cmd.Parameters.AddWithValue("@Quantity", quantity);
+                cmd.Parameters.AddWithValue("@CartItemId", cartItemId);
+
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+
             gvCart.EditIndex = -1;
             BindCart();
         }
+
 
         protected void gvCart_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {

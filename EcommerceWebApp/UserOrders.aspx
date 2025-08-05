@@ -15,7 +15,14 @@
             <Columns>
                 <asp:BoundField DataField="ProductName" HeaderText="Product" ReadOnly="True" />
                 <asp:BoundField DataField="PriceAtAdd" HeaderText="Unit Price" DataFormatString="{0:C}" ReadOnly="True" />
-                <asp:BoundField DataField="Quantity" HeaderText="Quantity" />
+                <asp:TemplateField HeaderText="Quantity">
+                    <ItemTemplate>
+                        <%# Eval("Quantity") %>
+                    </ItemTemplate>
+                    <EditItemTemplate>
+                        <asp:TextBox ID="txtQuantity" runat="server" Text='<%# Bind("Quantity") %>' CssClass="form-control" />
+                    </EditItemTemplate>
+                </asp:TemplateField>
                 <asp:TemplateField HeaderText="Added">
                     <ItemTemplate>
                         <%# Eval("AddedDate", "{0:yyyy-MM-dd HH:mm}") %>

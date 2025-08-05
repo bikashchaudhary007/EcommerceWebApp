@@ -1,11 +1,12 @@
-﻿using System;
+﻿using EcommerceWebApp.Helpers;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Configuration;
-using System.Data.SqlClient;
 
 
 namespace EcommerceWebApp.AdminPages
@@ -17,7 +18,16 @@ namespace EcommerceWebApp.AdminPages
         {
             if (!IsPostBack)
             {
+                string username = Session["Username"]?.ToString() ?? "AdminUser";
+                litUsername.Text = username;
                 LoadDashboardData();
+            }
+
+            if (Session["LoginToastMessage"] != null)
+            {
+                string msg = Session["LoginToastMessage"].ToString();
+                ToastHelper.RegisterToast(this, msg, isError: false);
+                Session.Remove("LoginToastMessage");
             }
 
         }

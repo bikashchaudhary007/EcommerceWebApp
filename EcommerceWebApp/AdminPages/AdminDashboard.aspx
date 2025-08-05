@@ -1,8 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminPages/AdminMasterPage.Master" AutoEventWireup="true" CodeBehind="AdminDashboard.aspx.cs" Inherits="EcommerceWebApp.AdminPages.WebForm1" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <h1>Hello Bikash</h1>
+    <h1>Hello 
+          <strong>
+              <asp:Literal ID="litUsername" runat="server" Text="AdminUser" /></strong>
+    </h1>
 
     <div class="row">
 

@@ -24,7 +24,7 @@
         
         <asp:TemplateField HeaderText="Order Status">
             <EditItemTemplate>
-                <asp:DropDownList ID="ddlStatus" runat="server">
+                <asp:DropDownList ID="ddlOrderStatus" runat="server">
                     <asp:ListItem Text="New" Value="New" />
                     <asp:ListItem Text="Processing" Value="Processing" />
                     <asp:ListItem Text="Shipped" Value="Shipped" />

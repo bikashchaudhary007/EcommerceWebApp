@@ -3,17 +3,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
     <style>
-    #carouselExampleCaptions {
-        height: 50vh;
-        overflow: hidden;
-    }
+        #carouselExampleCaptions {
+            height: 50vh;
+            overflow: hidden;
+        }
 
-    #carouselExampleCaptions .carousel-item img {
-        height: 50vh;
-        object-fit: cover;
-        width: 100%;
-    }
-</style>
+            #carouselExampleCaptions .carousel-item img {
+                height: 50vh;
+                object-fit: cover;
+                width: 100%;
+            }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <%-- Image Carosoule --%>
@@ -61,27 +61,53 @@
     <%-- Image Carosoule End --%>
 
 
+    <%-- Featured Products --%>
     <div class="container py-4">
-    <h3 class="mb-4">Our Products</h3>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-        <%-- Example of a product card, repeat this dynamically from your data source --%>
-        <asp:Repeater ID="rptProducts" runat="server">
-            <ItemTemplate>
-                <div class="col">
-                    <div class="card h-100">
-                       <img src='<%# ResolveImageUrl(Eval("ImageUrl")) %>' class="card-img-top" alt='<%# Eval("ProductName") %>' style="height: 200px; object-fit: cover;" />
-
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title"><%# Eval("ProductName") %></h5>
-                            <p class="card-text text-truncate"><%# Eval("ShortDescription") %></p>
-                            <p class="card-text fw-bold mt-auto"><%# String.Format("{0:C}", Eval("Price")) %></p>
-                            <a href='ProductView.aspx?id=<%# Eval("ProductId") %>' class="btn btn-primary mt-2">View Details</a>
+        <h3 class="mb-4">Our Featured Products</h3>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+            <asp:Repeater ID="rptFeaturedProducts" runat="server">
+                <ItemTemplate>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src='<%# ResolveImageUrl(Eval("ImageUrl")) %>' class="card-img-top" alt='<%# Eval("ProductName") %>' style="height: 200px; object-fit: cover;" />
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title"><%# Eval("ProductName") %></h5>
+                                <p class="card-text text-truncate"><%# Eval("ShortDescription") %></p>
+                                <p class="card-text fw-bold mt-auto"><%# String.Format("{0:C}", Eval("Price")) %></p>
+                                <a href='ProductView.aspx?id=<%# Eval("ProductId") %>' class="btn btn-primary mt-2">View Details</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </ItemTemplate>
-        </asp:Repeater>
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>
     </div>
-</div>
+
+
+    <%-- END Featured Products --%>
+
+
+    <div class="container py-4">
+        <h3 class="mb-4">Our Products</h3>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+            <%-- Example of a product card, repeat this dynamically from your data source --%>
+            <asp:Repeater ID="rptProducts" runat="server">
+                <ItemTemplate>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src='<%# ResolveImageUrl(Eval("ImageUrl")) %>' class="card-img-top" alt='<%# Eval("ProductName") %>' style="height: 200px; object-fit: cover;" />
+
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title"><%# Eval("ProductName") %></h5>
+                                <p class="card-text text-truncate"><%# Eval("ShortDescription") %></p>
+                                <p class="card-text fw-bold mt-auto"><%# String.Format("{0:C}", Eval("Price")) %></p>
+                                <a href='ProductView.aspx?id=<%# Eval("ProductId") %>' class="btn btn-primary mt-2">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>
+    </div>
 
 </asp:Content>

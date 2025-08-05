@@ -36,7 +36,7 @@ namespace EcommerceWebApp
                 if (rowsAffected > 0)
                 {
                     // Registration successful
-                    ToastHelper.RegisterToast(this, "Registration successfully!", isError: false);
+                    Session["RegisterToastMessage"] = $"Hello {txtFullName.Text}, registration successful!";
                     Response.Redirect("LoginPage.aspx");
 
                 }

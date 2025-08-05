@@ -13,7 +13,32 @@ namespace EcommerceWebApp.AdminPages
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            if (!IsPostBack)
+            {
+                string username = Session["Username"]?.ToString() ?? "AdminUser";
+                litRole.Text = "Administrator";
+                litUsernameTopbar.Text = username;
+                litTodayDate.Text = DateTime.Now.ToString("dddd, MMMM dd, yyyy");
+
+                string initials = GetInitials(username);
+                divAvatarInitials.InnerText = initials;
+            }
         }
+
+        private string GetInitials(string fullName)
+        {
+            if (string.IsNullOrWhiteSpace(fullName))
+                return "";
+
+            string[] parts = fullName.Trim().Split(' ');
+            if (parts.Length == 1)
+                return parts[0].Substring(0, 1).ToUpper();
+
+            return (parts[0][0].ToString() + parts[1][0].ToString()).ToUpper();
+        }
+
+
+
         public string GetActiveClass(string page)
         {
             string current = Path.GetFileName(Request.Path);

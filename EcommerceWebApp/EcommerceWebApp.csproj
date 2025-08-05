@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AboutUs.aspx" />
     <Content Include="AdminPages\AdminDashboard.aspx" />
     <Content Include="AdminPages\EditProduct.aspx" />
     <Content Include="AdminPages\ManageOrders.aspx" />
@@ -83,6 +84,11 @@
     <Content Include="assets\images\hand-image-1.jpeg" />
     <Content Include="assets\images\hand-image-2.jpeg" />
     <Content Include="assets\images\hand-image-3.jpeg" />
+    <Content Include="assets\images\mission-image-1.jpg" />
+    <Content Include="assets\images\team-image-1.jpeg" />
+    <Content Include="assets\images\values-image-1.jpg" />
+    <Content Include="assets\images\vision-image-1.jpg" />
+    <Content Include="ContactPage.aspx" />
     <Content Include="css\bootstrap-grid.css" />
     <Content Include="css\bootstrap-grid.min.css" />
     <Content Include="css\bootstrap-grid.rtl.css" />
@@ -116,6 +122,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminPages\AdminMasterPage.Master.cs">
       <DependentUpon>AdminMasterPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -185,6 +198,13 @@
     </Compile>
     <Compile Include="AdminPages\ProductCategory.aspx.designer.cs">
       <DependentUpon>ProductCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactPage.aspx.cs">
+      <DependentUpon>ContactPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactPage.aspx.designer.cs">
+      <DependentUpon>ContactPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>

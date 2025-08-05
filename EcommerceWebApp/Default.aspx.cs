@@ -16,6 +16,7 @@ namespace EcommerceWebApp
         {
             if (!IsPostBack)
             {
+                LoadFeaturedProducts();
                 BindProducts();
             }
 
@@ -36,6 +37,19 @@ namespace EcommerceWebApp
                 da.Fill(dt);
                 rptProducts.DataSource = dt;
                 rptProducts.DataBind();
+            }
+        }
+
+        private void LoadFeaturedProducts()
+        {
+            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ECDB"].ConnectionString))
+            {
+                string query = "SELECT * FROM Products WHERE IsFeatured = 1 ORDER BY CreatedAt DESC";
+                SqlDataAdapter da = new SqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                rptFeaturedProducts.DataSource = dt;
+                rptFeaturedProducts.DataBind();
             }
         }
 

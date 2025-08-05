@@ -15,6 +15,12 @@ namespace EcommerceWebApp
         string cs = ConfigurationManager.ConnectionStrings["ECDB"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["RegisterToastMessage"] != null)
+            {
+                string msg = Session["RegisterToastMessage"].ToString();
+                ToastHelper.RegisterToast(this, msg, isError: false);
+                Session.Remove("RegisterToastMessage");
+            }
 
         }
 
@@ -46,20 +52,21 @@ namespace EcommerceWebApp
 
                                 if (role.Equals("admin", StringComparison.OrdinalIgnoreCase))
                                 {
-                                    ToastHelper.RegisterToast(this, $"Hello {fullName}!", isError: false);
-
+                                    
+                                    Session["LoginToastMessage"] = $"Hello {fullName}, login successful!";
                                     Response.Redirect("AdminPages/AdminDashboard.aspx");
                                 }
                                 else // assume user
                                 {
-                                    ToastHelper.RegisterToast(this, $"Hello {fullName}!", isError: false);
+
+                                    Session["LoginToastMessage"] = $"Hello {fullName}, login successful!";
                                     Response.Redirect("MemberDashboard.aspx");
                                 }
                             }
                         }
                         else
                         {
-                            Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Login failed!');", true);
+                            ToastHelper.RegisterToast(this, "Login failed!!", isError: true);
                         }
                     }
                 }

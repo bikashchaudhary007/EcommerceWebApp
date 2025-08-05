@@ -13,7 +13,7 @@
         .avatar-initials {
             width: 32px;
             height: 32px;
-            background-color: #6c757d; /* gray fallback */
+            background-color: #6c757d; 
             color: #fff;
             font-size: 0.85rem;
             font-weight: 600;
@@ -42,17 +42,14 @@
                                 <a class="nav-link active" aria-current="page" href="Default.aspx">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Products</a>
+                                <a class="nav-link" href="AboutUs.aspx">About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
+                                <a class="nav-link" href="ContactPage.aspx">Contact</a>
                             </li>
                         </ul>
 
-                        <%-- <div class="d-flex">
-                            <a href="LoginPage.aspx" class="btn btn-outline-primary me-2">Login</a>
-                            <a href="SignUpPage.aspx" class="btn btn-primary">Sign Up</a>
-                        </div>--%>
+       
 
                         <div class="d-flex align-items-center">
                             <!-- login/signup -->
@@ -66,7 +63,7 @@
 
                                 <a class="d-flex align-items-center text-decoration-none dropdown-toggle" href="#" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                                     <div id="avatarPlaceholder" runat="server" class="avatar-initials rounded-circle d-flex justify-content-center align-items-center me-2">
-                                        <!-- initials populated in code-behind -->
+                                       
                                     </div>
                                     <span id="profileName" runat="server" class="me-1"></span>
                                 </a>

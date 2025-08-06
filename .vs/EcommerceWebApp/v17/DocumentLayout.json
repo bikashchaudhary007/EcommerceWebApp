@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\MScIT\\IA Project\\EcommerceWebApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5B2F9565-A965-420A-B11E-68CB4D5CA2F9}|EcommerceWebApp\\EcommerceWebApp.csproj|D:\\MScIT\\IA Project\\EcommerceWebApp\\ecommercewebapp\\signuppage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{5B2F9565-A965-420A-B11E-68CB4D5CA2F9}|EcommerceWebApp\\EcommerceWebApp.csproj|solutionrelative:ecommercewebapp\\signuppage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2F9565-A965-420A-B11E-68CB4D5CA2F9}|EcommerceWebApp\\EcommerceWebApp.csproj|D:\\MScIT\\IA Project\\EcommerceWebApp\\ecommercewebapp\\adminpages\\productlistview.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{5B2F9565-A965-420A-B11E-68CB4D5CA2F9}|EcommerceWebApp\\EcommerceWebApp.csproj|solutionrelative:ecommercewebapp\\adminpages\\productlistview.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5B2F9565-A965-420A-B11E-68CB4D5CA2F9}|EcommerceWebApp\\EcommerceWebApp.csproj|d:\\mscit\\ia project\\ecommercewebapp\\ecommercewebapp\\loginpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B2F9565-A965-420A-B11E-68CB4D5CA2F9}|EcommerceWebApp\\EcommerceWebApp.csproj|solutionrelative:ecommercewebapp\\loginpage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -20,10 +28,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5B2F9565-A965-420A-B11E-68CB4D5CA2F9}|EcommerceWebApp\\EcommerceWebApp.csproj|D:\\MScIT\\IA Project\\EcommerceWebApp\\ecommercewebapp\\adminpages\\productlistview.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B2F9565-A965-420A-B11E-68CB4D5CA2F9}|EcommerceWebApp\\EcommerceWebApp.csproj|solutionrelative:ecommercewebapp\\adminpages\\productlistview.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B2F9565-A965-420A-B11E-68CB4D5CA2F9}|EcommerceWebApp\\EcommerceWebApp.csproj|D:\\MScIT\\IA Project\\EcommerceWebApp\\ecommercewebapp\\adminpages\\productlistview.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{5B2F9565-A965-420A-B11E-68CB4D5CA2F9}|EcommerceWebApp\\EcommerceWebApp.csproj|solutionrelative:ecommercewebapp\\adminpages\\productlistview.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5B2F9565-A965-420A-B11E-68CB4D5CA2F9}|EcommerceWebApp\\EcommerceWebApp.csproj|D:\\MScIT\\IA Project\\EcommerceWebApp\\ecommercewebapp\\adminpages\\adminmasterpage.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
@@ -46,10 +50,6 @@
       "RelativeMoniker": "D:0:0:{5B2F9565-A965-420A-B11E-68CB4D5CA2F9}|EcommerceWebApp\\EcommerceWebApp.csproj|solutionrelative:ecommercewebapp\\signuppage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B2F9565-A965-420A-B11E-68CB4D5CA2F9}|EcommerceWebApp\\EcommerceWebApp.csproj|D:\\MScIT\\IA Project\\EcommerceWebApp\\ecommercewebapp\\signuppage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{5B2F9565-A965-420A-B11E-68CB4D5CA2F9}|EcommerceWebApp\\EcommerceWebApp.csproj|solutionrelative:ecommercewebapp\\signuppage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5B2F9565-A965-420A-B11E-68CB4D5CA2F9}|EcommerceWebApp\\EcommerceWebApp.csproj|D:\\MScIT\\IA Project\\EcommerceWebApp\\ecommercewebapp\\adminpages\\admindashboard.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B2F9565-A965-420A-B11E-68CB4D5CA2F9}|EcommerceWebApp\\EcommerceWebApp.csproj|solutionrelative:ecommercewebapp\\adminpages\\admindashboard.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -69,11 +69,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "AdminMasterPage.Master",
               "DocumentMoniker": "D:\\MScIT\\IA Project\\EcommerceWebApp\\EcommerceWebApp\\AdminPages\\AdminMasterPage.Master",
               "RelativeDocumentMoniker": "EcommerceWebApp\\AdminPages\\AdminMasterPage.Master",
@@ -81,11 +81,12 @@
               "RelativeToolTip": "EcommerceWebApp\\AdminPages\\AdminMasterPage.Master",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-08-06T05:31:09.849Z"
+              "WhenOpened": "2025-08-06T05:31:09.849Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "LoginPage.aspx",
               "DocumentMoniker": "D:\\MScIT\\IA Project\\EcommerceWebApp\\EcommerceWebApp\\LoginPage.aspx",
               "RelativeDocumentMoniker": "EcommerceWebApp\\LoginPage.aspx",
@@ -97,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Default.aspx",
               "DocumentMoniker": "D:\\MScIT\\IA Project\\EcommerceWebApp\\EcommerceWebApp\\Default.aspx",
               "RelativeDocumentMoniker": "EcommerceWebApp\\Default.aspx",
@@ -109,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "ProductListView.aspx",
               "DocumentMoniker": "D:\\MScIT\\IA Project\\EcommerceWebApp\\EcommerceWebApp\\AdminPages\\ProductListView.aspx",
               "RelativeDocumentMoniker": "EcommerceWebApp\\AdminPages\\ProductListView.aspx",
@@ -117,24 +118,25 @@
               "RelativeToolTip": "EcommerceWebApp\\AdminPages\\ProductListView.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-08-06T06:01:53.432Z"
+              "WhenOpened": "2025-08-06T06:01:53.432Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "LoginPage.aspx.cs",
               "DocumentMoniker": "D:\\MScIT\\IA Project\\EcommerceWebApp\\EcommerceWebApp\\LoginPage.aspx.cs",
               "RelativeDocumentMoniker": "EcommerceWebApp\\LoginPage.aspx.cs",
               "ToolTip": "D:\\MScIT\\IA Project\\EcommerceWebApp\\EcommerceWebApp\\LoginPage.aspx.cs",
               "RelativeToolTip": "EcommerceWebApp\\LoginPage.aspx.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAuwCYAAABIAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAA8wCYAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-05T11:13:16.838Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "ProductListView.aspx.cs",
               "DocumentMoniker": "D:\\MScIT\\IA Project\\EcommerceWebApp\\EcommerceWebApp\\AdminPages\\ProductListView.aspx.cs",
               "RelativeDocumentMoniker": "EcommerceWebApp\\AdminPages\\ProductListView.aspx.cs",
@@ -146,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "dbo.Users.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/D__MSCIT_IA_PROJECT_ECOMMERCEWEBAPP_ECOMMERCEWEBAPP_APP_DATA_ECOMMERCEDB.MDF/True/SqlTable/dbo.Users.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/D__MSCIT_IA_PROJECT_ECOMMERCEWEBAPP_ECOMMERCEWEBAPP_APP_DATA_ECOMMERCEDB.MDF/True/SqlTable/dbo.Users.sql",
@@ -155,7 +157,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 0,
               "Title": "SignUpPage.aspx",
               "DocumentMoniker": "D:\\MScIT\\IA Project\\EcommerceWebApp\\EcommerceWebApp\\SignUpPage.aspx",
               "RelativeDocumentMoniker": "EcommerceWebApp\\SignUpPage.aspx",
@@ -163,11 +165,12 @@
               "RelativeToolTip": "EcommerceWebApp\\SignUpPage.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-08-05T11:21:55.623Z"
+              "WhenOpened": "2025-08-05T11:21:55.623Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "SignUpPage.aspx.cs",
               "DocumentMoniker": "D:\\MScIT\\IA Project\\EcommerceWebApp\\EcommerceWebApp\\SignUpPage.aspx.cs",
               "RelativeDocumentMoniker": "EcommerceWebApp\\SignUpPage.aspx.cs",
@@ -191,7 +194,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "ProductView.aspx.cs",
               "DocumentMoniker": "D:\\MScIT\\IA Project\\EcommerceWebApp\\EcommerceWebApp\\ProductView.aspx.cs",
               "RelativeDocumentMoniker": "EcommerceWebApp\\ProductView.aspx.cs",
@@ -203,7 +206,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "ProductView.aspx",
               "DocumentMoniker": "D:\\MScIT\\IA Project\\EcommerceWebApp\\EcommerceWebApp\\ProductView.aspx",
               "RelativeDocumentMoniker": "EcommerceWebApp\\ProductView.aspx",
@@ -215,7 +218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "UserOrders.aspx",
               "DocumentMoniker": "D:\\MScIT\\IA Project\\EcommerceWebApp\\EcommerceWebApp\\UserOrders.aspx",
               "RelativeDocumentMoniker": "EcommerceWebApp\\UserOrders.aspx",

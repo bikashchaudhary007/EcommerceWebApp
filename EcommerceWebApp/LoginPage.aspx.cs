@@ -29,11 +29,14 @@ namespace EcommerceWebApp
             using (SqlConnection con = new SqlConnection(cs))
             {
                 con.Open();
-                string query = "SELECT * FROM Users WHERE Email=@Email AND Password=@Password";
+                string query = "SELECT * FROM Users WHERE LOWER(Email)=@Email AND Password=@Password";
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    cmd.Parameters.AddWithValue("@Email", txtUsername.Text);
-                    cmd.Parameters.AddWithValue("@Password", txtPassword.Text); 
+                    string email = txtUsername.Text.Trim().ToLower();
+                    string password = txtPassword.Text.Trim();
+
+                    cmd.Parameters.AddWithValue("@Email", email);
+                    cmd.Parameters.AddWithValue("@Password", password); 
                     using (SqlDataReader dr = cmd.ExecuteReader())
                     {
                         if (dr.HasRows)

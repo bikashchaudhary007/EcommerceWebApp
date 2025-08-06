@@ -28,22 +28,22 @@
             <div class="carousel-item active">
                 <img src="assets/images/hand-image-1.jpeg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
+                    <h5>Handcrafted Artistry</h5>
+                    <p>Capturing the meticulous process of creating a handcrafted wax seal, highlighting the blend of traditional techniques and artistic detail.</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="assets/images/hand-image-2.jpeg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
+                    <h5>Hand-Painted Ceramics</h5>
+                    <p>Showcasing a rich variety of decorative plates, highlighting the vibrant colors and diverse cultural artistry found in handcrafted goods.</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="assets/images/hand-image-3.jpeg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
+                    <h5>Traditional Decorative Pottery</h5>
+                    <p>A close-up view of beautifully decorated earthenware, showcasing a teapot and plates with vibrant, detailed patterns inspired by folk art.</p>
                 </div>
             </div>
         </div>
